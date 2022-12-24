@@ -1,5 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement>
-        <ui:Label text="Label" display-tooltip-when-elided="true" name="HealthLabel" style="color: rgb(255, 255, 255); font-size: 30px;" />
-    </ui:VisualElement>
-</ui:UXML>

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - Inventory Cursor
+  - Tooltip
   layers:
   - Default
   - TransparentFX
@@ -50,4 +52,28 @@ TagManager:
     locked: 0
   - name: Turret Inner Circle
     uniqueID: 655699317
+    locked: 0
+  - name: Information UI
+    uniqueID: 2560673999
+    locked: 0
+  - name: Inventory Outer UI
+    uniqueID: 2431715361
+    locked: 0
+  - name: Inventory Inner UI
+    uniqueID: 2947859061
+    locked: 0
+  - name: Inventory Item UI
+    uniqueID: 953830833
+    locked: 0
+  - name: Inventory Text UI
+    uniqueID: 3998797043
+    locked: 0
+  - name: Tooltip Box UI
+    uniqueID: 3442662685
+    locked: 0
+  - name: Tooltip Text UI
+    uniqueID: 1132370287
+    locked: 0
+  - name: Cursor
+    uniqueID: 1355686947
     locked: 0

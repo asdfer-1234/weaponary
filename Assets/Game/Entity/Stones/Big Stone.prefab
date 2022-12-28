@@ -70,6 +70,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4409675404710073574, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+--- !u!4 &538173999956470348 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 679967481702661371, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+  m_PrefabInstance: {fileID: 1015632860552730295}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3686777792435896915 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4409675404710073572, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
@@ -89,10 +94,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 2
   particle: {fileID: 6514712966937600166, guid: a711c3a75c79a8f4894acdb25fbfda9c, type: 3}
-  maxHealth: 60
-  health: 60
+  maxHealth: 100
   scoreParticle: {fileID: 6331535431755586997, guid: 486283d3d3f23b04189e602b0a2c93ec, type: 3}
   damage: 1
+  innerStone: {fileID: 538173999956470348}
   child: {fileID: 4409675404710073572, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
   childCount: 2
   childSpread: 0.1

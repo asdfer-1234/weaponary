@@ -33,20 +33,17 @@ class Projectile : CanDie
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (!startWall)
+		Entity otherEntity = other.gameObject.GetComponent<Entity>();
+		if (otherEntity != null && (otherEntity.force == Force.Hostile || (otherEntity.force != force && !startWall)))
 		{
-			Entity otherEntity = other.gameObject.GetComponent<Entity>();
-			if (otherEntity != null && force != otherEntity.force)
-			{
-				Stone stone = other.gameObject.GetComponent<Stone>();
+			Stone stone = other.gameObject.GetComponent<Stone>();
 
-				if (stone is not null)
-				{
-					stone.Damage(damage);
-					stone.Knockback((stone.transform.position - transform.position) * knockback);
-				}
-				Die();
+			if (stone is not null)
+			{
+				stone.Damage(damage);
+				stone.Knockback((stone.transform.position - transform.position) * knockback);
 			}
+			Die();
 		}
 	}
 }

@@ -1,14 +1,12 @@
 using UnityEngine;
-using UnityEngine.UIElements;
+using TMPro;
 
 public class FriendlyBase : Health
 {
-	[SerializeField] UIDocument ui;
-	private Label healthLabel;
+	[SerializeField] TextMeshPro text;
 
 	void Start()
 	{
-		healthLabel = ui.rootVisualElement.Q<Label>("HealthLabel");
 		ResetHealth();
 	}
 
@@ -17,7 +15,7 @@ public class FriendlyBase : Health
 		set
 		{
 			base.health = value;
-			healthLabel.text = health.ToString();
+			text.text = health.ToString();
 		}
 	}
 

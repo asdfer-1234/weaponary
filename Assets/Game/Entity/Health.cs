@@ -19,7 +19,6 @@ public abstract class Health : CanDie
 
 	void Start()
 	{
-		Debug.Log("base");
 		ResetHealth();
 	}
 

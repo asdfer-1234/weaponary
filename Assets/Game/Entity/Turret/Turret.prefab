@@ -154,8 +154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24251df215a84349b058b0a022d0639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 36e2bf545e064464a93c07bb944276be, type: 2}
+  defaultWeapon: {fileID: 11400000, guid: 36e2bf545e064464a93c07bb944276be, type: 2}
+  defaultAmmunition: {fileID: 11400000, guid: 9cafcec3b0ad4834eb194a7af0fc449d, type: 2}
   shootKey: 323
+  weaponSlot: {fileID: 0}
+  ammunitionSlot: {fileID: 0}
 --- !u!114 &2451508038557414294
 MonoBehaviour:
   m_ObjectHideFlags: 0

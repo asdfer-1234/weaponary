@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stone: {fileID: 3686777792435896915, guid: 04d0406b24a69b74fa06421ce684942f, type: 3}
   weight: 1
+  requiredDifficulty: 10

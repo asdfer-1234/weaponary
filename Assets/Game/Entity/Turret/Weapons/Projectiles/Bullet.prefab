@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8095550523035770690}
   - component: {fileID: 4593409278051777032}
   m_Layer: 2
-  m_Name: Projectile
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7040551074132658677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,6 +105,7 @@ MonoBehaviour:
   lifetime: 5
   knockback: 500
   damage: 10
+  piercing: 1
 --- !u!61 &8095550523035770690
 BoxCollider2D:
   m_ObjectHideFlags: 0

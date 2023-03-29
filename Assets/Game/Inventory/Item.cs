@@ -13,5 +13,4 @@ public class Item : ScriptableObject
 		RichTextBuilder.Line(itemName) +
 		RichTextBuilder.Line(RichTextBuilder.ColorizeText(description, RichTextBuilder.Palette.disabledColor)) +
 		RichTextBuilder.ValueLine("Stack Size:", RichTextBuilder.StackSizeString(stackSize, RichTextBuilder.Palette.goodPalette));
-	private string itemNameTooltip => itemName;
 }

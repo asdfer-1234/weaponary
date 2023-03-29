@@ -6,21 +6,37 @@ public class StoneGenerator : MonoBehaviour
 	[SerializeField] float timer;
 	[SerializeField] StoneGenerationWeight[] stones;
 	[SerializeField] Vector2 randomVelocity;
+	[Header("Difficulty")]
+	[SerializeField] float difficulty;
+	[SerializeField] float difficultyIncrease;
 
 
 	void Update()
 	{
+		DifficultyUpdate();
+		GenerationalUpdate();
+	}
+
+	private void GenerationalUpdate()
+	{
 		timer += Time.deltaTime;
-		if (interval <= timer)
+
+		if (interval / difficulty <= timer)
 		{
-			timer -= interval;
+			timer -= interval / difficulty;
 			Generate();
+
 		}
+	}
+
+	private void DifficultyUpdate()
+	{
+		difficulty += Time.deltaTime * difficultyIncrease;
 	}
 
 	private void Generate()
 	{
-		GameObject stone = StoneGenerationWeight.RandomStone(stones).stone;
+		GameObject stone = StoneGenerationWeight.RandomStone(stones, difficulty).stone;
 
 		GameObject instantiated = Instantiate(stone, transform.position + (Vector3)randomInScale, Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
 		instantiated.GetComponent<Rigidbody2D>().AddForce(Random.insideUnitCircle * randomVelocity);

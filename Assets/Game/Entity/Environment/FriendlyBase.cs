@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class FriendlyBase : Health
 {
@@ -7,7 +8,13 @@ public class FriendlyBase : Health
 
 	void Start()
 	{
+		GlobalData.time = 0f;
 		ResetHealth();
+	}
+
+	void Update()
+	{
+		GlobalData.time += Time.deltaTime;
 	}
 
 	public override int health
@@ -21,6 +28,11 @@ public class FriendlyBase : Health
 
 	public override void OnDeath()
 	{
-		Debug.Log("Game End");
+		GameOver();
+	}
+
+	public void GameOver()
+	{
+		SceneManager.LoadScene("GameOverScene");
 	}
 }

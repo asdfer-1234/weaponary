@@ -16,8 +16,9 @@ MonoBehaviour:
   itemName: Default Ammunition
   stackSize: 1
   description: Basic Ammunition
+  projectile: {fileID: 7040551074132658677, guid: 7a38a9fac9fa65843858f5e5a2c189fe, type: 3}
   damageMultiplier: 1
   attackSpeedMultiplier: 1
+  spreadMultiplier: 1
   additionalPiercing: 0
   additionalBullets: 0
-  Projectile: {fileID: 7040551074132658677, guid: 7a38a9fac9fa65843858f5e5a2c189fe, type: 3}

@@ -7,23 +7,30 @@ public class StoneGenerationWeight : ScriptableObject
 {
 	public GameObject stone;
 	public int weight;
+	public float requiredDifficulty;
 
-	public static StoneGenerationWeight RandomStone(StoneGenerationWeight[] stones)
+	public static StoneGenerationWeight RandomStone(StoneGenerationWeight[] stones, float difficulty)
 	{
 		int totalWeight = 0;
 		foreach (StoneGenerationWeight i in stones)
 		{
-			totalWeight += i.weight;
+			if (i.requiredDifficulty <= difficulty)
+			{
+				totalWeight += i.weight;
+			}
 		}
 
 		int randomWeight = Random.Range(0, totalWeight);
 
 		foreach (StoneGenerationWeight i in stones)
 		{
-			randomWeight -= i.weight;
-			if (randomWeight < 0)
+			if (i.requiredDifficulty <= difficulty)
 			{
-				return i;
+				randomWeight -= i.weight;
+				if (randomWeight < 0)
+				{
+					return i;
+				}
 			}
 		}
 		if (stones.Length == 0)

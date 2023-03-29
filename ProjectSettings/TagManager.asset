@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - Inventory Cursor
   - Tooltip
+  - Inventory
   layers:
   - Default
   - TransparentFX
@@ -67,6 +68,12 @@ TagManager:
     locked: 0
   - name: Inventory Text UI
     uniqueID: 3998797043
+    locked: 0
+  - name: Button Image
+    uniqueID: 3955465125
+    locked: 0
+  - name: Button Text
+    uniqueID: 3236109037
     locked: 0
   - name: Tooltip Box UI
     uniqueID: 3442662685

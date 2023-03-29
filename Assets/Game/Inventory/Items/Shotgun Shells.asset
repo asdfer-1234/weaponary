@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 4afc67bfef153a64f8d53c56699c55a8, type: 3}
   itemName: Shotgun Shells
-  stackSize: 30
+  stackSize: 100
   description: Multishot Ammunition
+  projectile: {fileID: 7040551074132658677, guid: 7a38a9fac9fa65843858f5e5a2c189fe, type: 3}
   damageMultiplier: 1
   attackSpeedMultiplier: 0.25
-  spreadMultiplier: 0
+  spreadMultiplier: 2
   additionalPiercing: 0
-  additionalBullets: 5
-  Projectile: {fileID: 0}
+  additionalBullets: 10

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4409675404710073573}
   - component: {fileID: 4409675404710073569}
   - component: {fileID: 2769533914915627109}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 2
   particle: {fileID: 6514712966937600166, guid: a711c3a75c79a8f4894acdb25fbfda9c, type: 3}
-  maxHealth: 100
+  maxHealth: 10
   scoreParticle: {fileID: 6331535431755586997, guid: 486283d3d3f23b04189e602b0a2c93ec, type: 3}
   damage: 1
   innerStone: {fileID: 679967481702661371}
@@ -84,8 +84,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 2
+  m_AngularDrag: 0.02
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 08a4dad7b07612f4a88899a30e95bf4f, type: 2}
   m_Interpolate: 0
@@ -114,7 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7295283047189880576}
   - component: {fileID: 6247560599056782772}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Outer Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 679967481702661371}
   - component: {fileID: 8422186284644420772}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Inner stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

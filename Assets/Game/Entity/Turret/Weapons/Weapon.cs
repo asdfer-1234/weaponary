@@ -5,7 +5,6 @@ using UnityEngine;
 public class Weapon : Item
 {
 	[Header("Weapon")]
-	public GameObject projectile;
 	public int damage;
 	public float attackSpeed;
 	public float spread;

@@ -4,18 +4,7 @@ using UnityEngine;
 public class InventorySlot : MonoBehaviour
 {
 	public ItemStack startingItemStack = ItemStack.empty;
-	public ItemStack itemStack
-	{
-		get => m_itemStack;
-		set
-		{
-			m_itemStack = value;
-			display.InventorySlotDisplay(this);
-			itemStack.observers.Add(UpdateDisplay);
-			UpdateDisplay();
-		}
-	}
-	private ItemStack m_itemStack;
+	public ItemStack itemStack;
 
 	public ItemStackDisplay display;
 	[SerializeField] KeyCode primaryKey;
@@ -38,8 +27,6 @@ public class InventorySlot : MonoBehaviour
 	void Start()
 	{
 		itemStack = startingItemStack;
-
-		itemStack.observers.Add(UpdateDisplay);
 	}
 
 	void Update()
@@ -55,6 +42,7 @@ public class InventorySlot : MonoBehaviour
 				Secondary();
 			}
 		}
+		UpdateDisplay();
 	}
 
 
@@ -93,7 +81,7 @@ public class InventorySlot : MonoBehaviour
 	{
 		if (other.itemStack.itemType == itemStack.itemType)
 		{
-			MergeStacks(other);
+			MergeStacks(other.itemStack);
 		}
 		else
 		{
@@ -102,30 +90,30 @@ public class InventorySlot : MonoBehaviour
 		InventoryCursor.main.DropIfEmpty();
 	}
 
-	private void MergeStacks(InventorySlot other)
+	public void MergeStacks(ItemStack other)
 	{
 		int maxStack = itemStack.itemType.stackSize;
 
-		int added = itemStack.count + other.itemStack.count;
+		int added = itemStack.count + other.count;
 
 		if (added <= maxStack)
 		{
-			other.itemStack.count = added;
+			other.count = added;
 			itemStack = ItemStack.empty;
 		}
 		else
 		{
 
 			int leftover = added - maxStack;
-			if (other.itemStack.count == other.itemStack.itemType.stackSize)
+			if (other.count == other.itemType.stackSize)
 			{
 				itemStack.count = maxStack;
-				other.itemStack.count = leftover;
+				other.count = leftover;
 			}
 			else
 			{
 				itemStack.count = leftover;
-				other.itemStack.count = maxStack;
+				other.count = maxStack;
 			}
 		}
 	}

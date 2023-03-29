@@ -78,11 +78,11 @@ public static class RichTextBuilder
 		}
 		if (value > 0f)
 		{
-			return ColorizeText(value.ToString(), palette.positiveColor);
+			return ColorizeText(value.ToString("0.0"), palette.positiveColor);
 		}
 		else
 		{
-			return ColorizeText(value.ToString(), palette.negativeColor);
+			return ColorizeText(value.ToString("0.0"), palette.negativeColor);
 		}
 	}
 

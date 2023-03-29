@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6007768624091593020
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4409675404710073568, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409675404710073568, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409675404710073568, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409675404710073568, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409675404710073568, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409675404710073568, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409675404710073568, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409675404710073568, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409675404710073568, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409675404710073568, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409675404710073568, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409675404710073572, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_Name
+      value: Health Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247560599056782772, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247560599056782772, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4409675404710073574, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+--- !u!4 &6498794772147422663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 679967481702661371, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+  m_PrefabInstance: {fileID: 6007768624091593020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7957211629504048600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4409675404710073572, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
+  m_PrefabInstance: {fileID: 6007768624091593020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4319235262456025754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7957211629504048600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f201b95adb0bb864bbfdd4a4272f51b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 2
+  particle: {fileID: 6514712966937600166, guid: a711c3a75c79a8f4894acdb25fbfda9c, type: 3}
+  maxHealth: 100
+  scoreParticle: {fileID: 0}
+  damage: 0
+  innerStone: {fileID: 6498794772147422663}
+  rewardHealth: 2

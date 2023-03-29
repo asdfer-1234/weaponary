@@ -49,6 +49,10 @@ public class InventoryCursor : MonoBehaviour
 
 	public void DropIfEmpty()
 	{
+		if (inventorySlot == null)
+		{
+			return;
+		}
 		if (!inventorySlot.itemStack.containsItem)
 		{
 			Drop();

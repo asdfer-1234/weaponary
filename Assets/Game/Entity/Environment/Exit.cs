@@ -8,4 +8,9 @@ public class Exit : Entity
 	{
 		friendlyBase.Damage(damage);
 	}
+
+	public void RepairBase(int repair)
+	{
+		friendlyBase.Repair(repair);
+	}
 }

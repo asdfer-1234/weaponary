@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   stone: {fileID: 4409675404710073572, guid: 534dea03d105ac7418b83a37c598666f, type: 3}
-  weight: 2
+  weight: 10
+  requiredDifficulty: 0

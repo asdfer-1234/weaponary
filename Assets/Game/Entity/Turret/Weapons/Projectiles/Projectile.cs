@@ -7,7 +7,9 @@ class Projectile : CanDie
 	public float lifetime;
 	public float knockback;
 	public int damage;
+	public int piercing;
 	private bool startWall = true;
+
 
 	void Start()
 	{
@@ -34,16 +36,25 @@ class Projectile : CanDie
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		Entity otherEntity = other.gameObject.GetComponent<Entity>();
-		if (otherEntity != null && (otherEntity.force == Force.Hostile || (otherEntity.force != force && !startWall)))
-		{
-			Stone stone = other.gameObject.GetComponent<Stone>();
 
-			if (stone is not null)
+		if (otherEntity != null)
+		{
+			if (otherEntity.force == Force.Neutral && !startWall)
 			{
-				stone.Damage(damage);
-				stone.Knockback((stone.transform.position - transform.position) * knockback);
+				Die();
 			}
-			Die();
+		}
+		Stone stone = other.gameObject.GetComponent<Stone>();
+
+		if (stone is not null)
+		{
+			stone.Damage(damage);
+			stone.Knockback((stone.transform.position - transform.position) * knockback);
+			piercing--;
+			if (piercing <= 0)
+			{
+				Die();
+			}
 		}
 	}
 }
